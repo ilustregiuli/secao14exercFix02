@@ -10,10 +10,9 @@ public abstract class Contribuinte {
 		
 	}
 	
-	public Contribuinte(String nome, Double rendAnual, Double impostPago) {
+	public Contribuinte(String nome, Double rendAnual) {
 		this.nome = nome;
 		this.rendAnual = rendAnual;
-		this.impostPago = impostPago;
 	}
 
 	public String getNome() {

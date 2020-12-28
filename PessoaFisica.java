@@ -8,8 +8,8 @@ public class PessoaFisica extends Contribuinte{
 		super();
 	}
 	
-	public PessoaFisica(Double gastosSaude) {
-		super();
+	public PessoaFisica(String name, Double rendAnual, Double gastosSaude) {
+		super(name,rendAnual);
 		this.gastosSaude = gastosSaude;
 	}
 
@@ -21,7 +21,10 @@ public class PessoaFisica extends Contribuinte{
 		} else {
 			imposto = rendAnual * 0.25;
 		}
-		return null;
+		if(gastosSaude != 0) {
+			imposto = imposto - (gastosSaude / 2);
+		}
+		return imposto;
 	}
 
 }
